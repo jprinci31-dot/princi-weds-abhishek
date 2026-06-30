@@ -238,3 +238,19 @@ footer {
 .gallery img:hover {
   transform: scale(1.05);
 }
+/* FLOATING HEART ANIMATION */
+.heart {
+  position: fixed;
+  top: -10px;
+  color: #ff4d6d;
+  font-size: 20px;
+  animation: fall linear forwards;
+  z-index: 9999;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
