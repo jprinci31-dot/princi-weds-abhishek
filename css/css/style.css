@@ -18,7 +18,25 @@ header {
   align-items: center;
   text-align: center;
   color: white;
-  background: url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e') center/cover no-repeat;
+  background: body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ffe6f0, #fff0f5) !important;
+}
+
+header {
+  height: 100vh;
+  width: 100%;
+  background: url('https://images.unsplash.com/photo-1523438885200-e635ba2c371e') center/cover no-repeat !important;
+  position: relative;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
   position: relative;
 }
 
