@@ -40,7 +40,7 @@
 
   </section>
 
-  <!-- RSVP -->
+  <!-- <button onclick="submitRSVP()">Send RSVP</button>  <p id="msg"></p>  <script> function submitRSVP() {   document.getElementById("msg").innerHTML =     "Thank you! Your RSVP has been received 💖"; } </script> -->
   <section>
     <h2>RSVP</h2>
     <div class="card">
@@ -220,3 +220,14 @@ even more memorable.
 </div>
 
 </section>
+<!-- BACKGROUND MUSIC -->
+<audio id="bgMusic" autoplay loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  // Try to autoplay music (browser may block it until user clicks)
+  window.addEventListener("click", function () {
+    document.getElementById("bgMusic").play();
+  });
+</script>
