@@ -1,7 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<head><!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Princi & Abhishek Wedding</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- HERO SECTION -->
+  <header>
+    <div>
+      <h1>Princi & Abhishek</h1>
+      <p>We are getting married on 2nd February 2027</p>
+    </div>
+  </header>
+
+  <!-- COUNTDOWN -->
+  <section>
+    <h2>Countdown to Our Big Day</h2>
+    <div class="card">
+      <p id="countdown"></p>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section>
+    <h2>Wedding Events</h2>
+
+    <div class="card">Haldi Ceremony - Fun & Colors 🌼</div>
+    <div class="card">Mehendi Ceremony - Art & Joy 🎨</div>
+    <div class="card">Wedding Ceremony - Sacred Vows 💍</div>
+    <div class="card">Reception - Celebration 🎉</div>
+
+  </section>
+
+  <!-- RSVP -->
+  <section>
+    <h2>RSVP</h2>
+    <div class="card">
+      <input type="text" placeholder="Your Name" style="width:100%;padding:10px;margin:5px 0;">
+      <input type="email" placeholder="Your Email" style="width:100%;padding:10px;margin:5px 0;">
+      <button>Confirm Attendance</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>With love 💖 Princi & Abhishek Family</p>
+  </footer>
+
+  <!-- COUNTDOWN SCRIPT -->
+  <script>
+    const weddingDate = new Date("Feb 2, 2027 00:00:00").getTime();
+
+    const x = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+      document.getElementById("countdown").innerHTML =
+        days + " days left until our wedding 💍";
+
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "It's Wedding Day 💖";
+      }
+    }, 1000);
+  </script>
+
+</body>
+</html>
 
 <meta charset="UTF-8">
 
