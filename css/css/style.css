@@ -290,3 +290,27 @@ section {
     transform: translateY(0);
   }
 }
+<button onclick="submitRSVP()">Send RSVP</button>
+
+<p id="msg" style="margin-top:10px;font-weight:bold;color:#c2185b;"></p>
+
+<script>
+function submitRSVP() {
+  document.getElementById("msg").innerHTML =
+    "💖 Thank you! Your RSVP is confirmed.";
+}
+</script>
+      @media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  header p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .card {
+    margin: 10px;
+  }
+}
