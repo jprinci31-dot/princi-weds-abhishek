@@ -90,3 +90,23 @@ button:hover, .btn:hover {
     margin-top: 15px;
     font-weight: bold;
 }
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+
+/* soft glow effect */
+.hero h1 {
+    text-shadow: 0 0 10px rgba(255,255,255,0.7);
+}
+
+/* smooth background */
+body {
+    overflow-x: hidden;
+}
