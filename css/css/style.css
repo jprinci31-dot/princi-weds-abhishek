@@ -132,3 +132,17 @@ width:95%;
 }
 
 }
+.rsvp{
+    text-align:center;
+    padding:50px 20px;
+}
+
+.btn{
+    display:inline-block;
+    background:#e91e63;
+    color:white;
+    padding:12px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    font-size:18px;
+}
