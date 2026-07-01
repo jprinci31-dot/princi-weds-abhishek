@@ -1,208 +1,77 @@
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-
-<script>
-  function launchConfetti() {
-    confetti({
-      particleCount: 150,
-      spread: 80,
-      origin: { y: 0.6 }
-    });
-  }
-
-  window.onload = launchConfetti;
-</script><!DOCTYPE html>
-<html lang="en">
-<link rel="stylesheet" href="css/style.css">
-<head><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="css/style.css">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Princi & Abhishek Wedding</title>
-  <link rel="stylesheet" href="css/style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-</head>
-<link rel="stylesheet" href="css/style.css">
-<body>
-
-  <!-- HERO SECTION -->
-  <header>
-    <div>
-      <h1>Princi & Abhishek</h1>
-      <p>We are getting married on 2nd February 2027</p>
-    </div>
-  </header>
-
-  <!-- COUNTDOWN -->
-  <section>
-    <h2>Countdown to Our Big Day</h2>
-    <div class="card">
-      <p id="countdown"></p>
-    </div>
-  </section>
-
-  <!-- EVENTS -->
-  <section>
-    <h2>Wedding Events</h2>
-
-    <div class="card">Haldi Ceremony - Fun & Colors 🌼</div>
-    <div class="card">Mehendi Ceremony - Art & Joy 🎨</div>
-    <div class="card">Wedding Ceremony - Sacred Vows 💍</div>
-    <div class="card">Reception - Celebration 🎉</div>
-
-  </section>
-
-  <!-- <button onclick="submitRSVP()">Send RSVP</button>  <p id="msg"></p>  <script> function submitRSVP() {   document.getElementById("msg").innerHTML =     "Thank you! Your RSVP has been received 💖"; } </script> -->
-  <section>
-    <h2>RSVP</h2>
-    <div class="card">
-      <input type="text" placeholder="Your Name" style="width:100%;padding:10px;margin:5px 0;">
-      <input type="email" placeholder="Your Email" style="width:100%;padding:10px;margin:5px 0;">
-      <button>Confirm Attendance</button>
-    </div>
-  </section>
-<!-- PHOTO GALLERY -->
-<section>
-  <h2>Our Memories</h2>
-
-  <div class="card">
-    <p>Beautiful moments of our journey 💖</p>
-  </div>
-
-  <div class="card">
-    <p>Engagement memories ✨</p>
-  </div>
-
-  <div class="card">
-    <p>Family celebrations 🎉</p>
-  </div>
-</section>
-  <!-- FOOTER -->
-  <footer>
-    <p>With love 💖 Princi & Abhishek Family</p>
-  </footer>
-
-  <!-- COUNTDOWN SCRIPT -->
-  <script>
-    const weddingDate = new Date("Feb 2, 2027 00:00:00").getTime();
-
-    const x = setInterval(function() {
-      const now = new Date().getTime();
-      const distance = weddingDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-
-      document.getElementById("countdown").innerHTML =
-        days + " days left until our wedding 💍";
-
-      if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("countdown").innerHTML = "It's Wedding Day 💖";
-      }
-    }, 1000);
-  </script>
-
-</body>
-</html>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Princi ❤️ Abhishek | Wedding Invitation</title>
 
 <link rel="stylesheet" href="css/style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
 
-<header>
-
-<nav class="navbar">
-
-<div class="logo">
-
-Princi ❤️ Abhishek
-
-</div>
-
-<ul>
-
-<li><a href="#home">Home</a></li>
-
-<li><a href="#about">About</a></li>
-
-<li><a href="#events">Events</a></li>
-
-<li><a href="#gallery">Gallery</a></li>
-
-<li><a href="#venue">Venue</a></li>
-
-<li><a href="#rsvp">RSVP</a></li>
-
-</ul>
-
-</nav>
-
-</header>
-
-<section class="hero" id="home">
+<section class="hero">
 
 <div class="overlay">
 
-<div class="hero-content">
+<h3>॥ श्री गणेशाय नमः ॥</h3>
 
-<h3>
+<h1>Princi ❤️ Abhishek</h1>
 
-💍 Wedding Invitation 💍
+<h2>Wedding Invitation</h2>
 
-</h3>
+<p>With the blessings of our parents,<br>
+we invite you to celebrate our wedding.</p>
 
-<h1>
+<h3>📅 2 February 2027</h3>
 
-Princi
-
-<span>&</span>
-
-Abhishek
-
-</h1>
+<h3>🕖 7:00 PM</h3>
 
 <p>
-
-Together with our families
-
+📍 Kadva Patidar Samaj<br>
+Opp. Collector Office,<br>
+Sector 12B, Gandhinagar
 </p>
 
-<h2>
+<img src="images/couple.jpg" class="main-photo">
 
-हम आपको हमारे शुभ विवाह समारोह में
+<br><br>
 
-सादर आमंत्रित करते हैं।
+<button onclick="playMusic()">🎵 Play Music</button>
 
-</h2>
+<div id="countdown"></div>
 
-<p class="date">
+</div>
 
-02 February 2027
+</section>
 
-</p>
+<section>
 
-<p class="time">
+<h2>Bride & Groom</h2>
 
-🕖 7:00 PM
+<div class="cards">
 
-</p>
+<div class="card">
 
-<a href="#about" class="btn">
+<img src="images/bride.jpg">
 
-View Invitation
+<h3>Princi Jaiswal</h3>
 
-</a>
+<p>Daughter of<br>
+Rajendra Jaiswal & Manju Jaiswal</p>
+
+</div>
+
+<div class="card">
+
+<img src="images/groom.jpg">
+
+<h3>Abhishek Jaiswal</h3>
+
+<p>Son of<br>
+Kamlesh Jayswal & Malti Jayswal</p>
 
 </div>
 
@@ -210,37 +79,13 @@ View Invitation
 
 </section>
 
-<section class="welcome">
+<audio id="music" loop>
 
-<div class="container">
+<source src="music/song.mp3" type="audio/mpeg">
 
-<h2>
-
-Welcome
-
-</h2>
-
-<p>
-
-Your love, blessings and presence
-
-will make our special day
-
-even more memorable.
-
-</p>
-
-</div>
-
-</section>
-<!-- BACKGROUND MUSIC -->
-<audio id="bgMusic" autoplay loop>
-  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
 </audio>
 
-<script>
-  // Try to autoplay music (browser may block it until user clicks)
-  window.addEventListener("click", function () {
-    document.getElementById("bgMusic").play();
-  });
-</script>
+<script src="script.js"></script>
+
+</body>
+</html>
