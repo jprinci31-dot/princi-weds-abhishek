@@ -24,11 +24,15 @@ overflow-x:hidden;
 
 /* HERO */
 
-.hero{
-button,
+.button,
 .btn{
     background:#b76e79;
     color:white;
+}
+
+button:hover,
+.btn:hover{
+    background:#9c5b65;
 }
 
 button:hover,
