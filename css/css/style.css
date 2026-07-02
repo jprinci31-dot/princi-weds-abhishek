@@ -156,3 +156,47 @@ opacity:0;
 }
 
 }
+/* Fade Animation */
+
+section{
+    animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+
+from{
+    opacity:0;
+    transform:translateY(60px);
+}
+
+to{
+    opacity:1;
+    transform:translateY(0);
+}
+
+}
+
+/* Hover Effect */
+
+.card{
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+}
+
+/* Buttons */
+
+.btn,
+button{
+
+    transition:.4s;
+}
+
+.btn:hover,
+button:hover{
+
+transform:scale(1.08);
+}
