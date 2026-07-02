@@ -1,8 +1,7 @@
-/* ===========================
-   PRINCI ❤️ ABHISHEK
-   Wedding Invitation
-   Premium CSS
-=========================== */
+/* =======================================
+   PRINCI WEDS ABHISHEK
+   STYLE.CSS (PART 1/3)
+======================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap');
 
@@ -16,68 +15,65 @@ scroll-behavior:smooth;
 body{
 
 font-family:'Poppins',sans-serif;
-background:#f8f5ef;
-color:#333;
+background:#1b1035;
+color:#ffffff;
 overflow-x:hidden;
+text-align:center;
 
 }
 
 /* HERO */
 
-.button,
-.btn{
-    background:#b76e79;
-    color:white;
-}
+.hero{
 
-button:hover,
-.btn:hover{
-    background:#9c5b65;
-}
+min-height:100vh;
 
-button:hover,
-.btn:hover{
-    background:#9c5b65;
-};
+background:
+linear-gradient(rgba(15,10,35,.65),rgba(15,10,35,.65)),
+url("couple.jpg.jpeg");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
 
 display:flex;
-
 justify-content:center;
-
 align-items:center;
 
-text-align:center;
-
-padding:40px;
+padding:50px 20px;
 
 }
 
 .overlay{
 
-.overlay{
-background:rgba(20,20,35,.55);
+max-width:900px;
+width:100%;
+
+background:rgba(255,255,255,.08);
+
 backdrop-filter:blur(12px);
-padding:50px;
+
 border-radius:25px;
-border:1px solid rgba(255,255,255,.25);
-box-shadow:0 0 40px rgba(183,110,121,.45);
-}
-}
 
-.hero h3{
+padding:50px;
 
-color:#fff;
+border:1px solid rgba(255,255,255,.2);
 
-font-size:24px;
+box-shadow:0 20px 60px rgba(0,0,0,.35);
 
 }
 
 .hero h1{
+
 font-family:'Great Vibes',cursive;
-font-size:90px;
+
+font-size:85px;
+
 color:white;
-text-shadow:0 0 25px #b76e79;
-}
+
+margin:20px 0;
+
+text-shadow:0 0 20px #ff8cc8;
 
 }
 
@@ -85,9 +81,17 @@ text-shadow:0 0 25px #b76e79;
 
 font-size:34px;
 
-color:#ffe082;
+color:#ffd7ef;
 
 margin-bottom:20px;
+
+}
+
+.hero h3{
+
+font-size:24px;
+
+color:#ffe8b5;
 
 }
 
@@ -99,39 +103,25 @@ line-height:1.8;
 
 color:white;
 
-}
-
-.date-box{
-
-margin:30px 0;
-
-}
-
-.date-box h3{
-
-font-size:26px;
-
-margin:10px;
-
-color:#fff;
+margin-top:15px;
 
 }
 
 .main-photo{
 
-width:330px;
+width:320px;
 
 max-width:90%;
 
-border-radius:22px;
+border-radius:20px;
 
-border:6px solid white;
+border:5px solid white;
+
+margin-top:25px;
 
 box-shadow:0 15px 40px rgba(0,0,0,.35);
 
 transition:.5s;
-
-margin-top:25px;
 
 }
 
@@ -141,65 +131,68 @@ transform:scale(1.05);
 
 }
 
-button,
+/* BUTTON */
 
+button,
 .btn{
 
-margin-top:25px;
+background:#b76e79;
 
-background:#b8860b;
+color:white;
 
 padding:14px 28px;
 
 border:none;
 
-border-radius:40px;
-
-font-size:18px;
-
-color:white;
+border-radius:35px;
 
 cursor:pointer;
 
-transition:.4s;
+font-size:18px;
 
 text-decoration:none;
 
 display:inline-block;
 
+transition:.4s;
+
+margin-top:25px;
+
 }
 
 button:hover,
-
 .btn:hover{
 
-background:#8b6b00;
+background:#d4af37;
+
+color:#222;
 
 transform:scale(1.06);
 
 }
 
-/* Countdown */
+/* COUNTDOWN */
 
 #countdown{
-
-margin-top:30px;
 
 font-size:26px;
 
 font-weight:bold;
 
-color:white;
+margin-top:25px;
+
+color:#fff;
 
 }
-
-/* Couple */
+/* =======================================
+   COUPLE SECTION
+======================================= */
 
 .couple{
 
-padding:90px 20px;
+padding:80px 20px;
 
-background:white;
+background:#241548;
 
 }
 
@@ -207,9 +200,11 @@ background:white;
 
 font-size:42px;
 
-color:#b8860b;
+color:#ffd7ef;
 
-margin-bottom:50px;
+margin-bottom:40px;
+
+font-family:'Great Vibes',cursive;
 
 }
 
@@ -221,30 +216,25 @@ justify-content:center;
 
 flex-wrap:wrap;
 
-gap:40px;
+gap:30px;
 
 }
 
 .card{
-.card{
 
-background:rgba(255,255,255,.08);
-
-backdrop-filter:blur(15px);
-
-border:1px solid rgba(255,255,255,.2);
-
-color:white;
+background:#2d1b55;
 
 padding:20px;
 
+width:260px;
+
 border-radius:20px;
 
-box-shadow:0 10px 25px rgba(0,0,0,.20);
+border:2px solid #b76e79;
+
+box-shadow:0 10px 30px rgba(0,0,0,.35);
 
 transition:.4s;
-
-}
 
 }
 
@@ -252,23 +242,25 @@ transition:.4s;
 
 transform:translateY(-10px);
 
+box-shadow:0 15px 35px rgba(183,110,121,.45);
+
 }
 
 .card img{
 
 width:100%;
 
-border-radius:18px;
+border-radius:15px;
 
-margin-bottom:18px;
+margin-bottom:15px;
 
 }
 
 .card h3{
 
-font-size:30px;
+color:#ffe8b5;
 
-color:#b8860b;
+font-size:28px;
 
 margin-bottom:10px;
 
@@ -276,30 +268,35 @@ margin-bottom:10px;
 
 .card p{
 
+color:white;
+
 font-size:18px;
 
 line-height:1.8;
 
 }
-/* ===========================
+
+/* =======================================
    TIMELINE
-=========================== */
+======================================= */
 
 .timeline{
 
-padding:90px 20px;
+padding:80px 20px;
 
-background:#fdf8ef;
+background:#1b1035;
 
 }
 
 .timeline h2{
 
-font-size:42px;
+font-family:'Great Vibes',cursive;
 
-color:#b8860b;
+font-size:45px;
 
-margin-bottom:50px;
+color:#ffd7ef;
+
+margin-bottom:40px;
 
 }
 
@@ -311,31 +308,27 @@ justify-content:center;
 
 flex-wrap:wrap;
 
-gap:30px;
+gap:25px;
 
 }
 
 .event{
 
-.event{
+background:#2d1b55;
 
-background:rgba(255,255,255,.08);
-
-backdrop-filter:blur(15px);
-
-border:1px solid rgba(255,255,255,.2);
-
-color:white;
+width:260px;
 
 padding:25px;
 
 border-radius:20px;
 
-box-shadow:0 10px 25px rgba(0,0,0,.20);
+border:2px solid #b76e79;
+
+box-shadow:0 10px 30px rgba(0,0,0,.35);
 
 transition:.4s;
 
-}w
+}
 
 .event:hover{
 
@@ -345,9 +338,7 @@ transform:translateY(-10px);
 
 .event h3{
 
-font-size:28px;
-
-color:#b8860b;
+color:#ffe8b5;
 
 margin-bottom:15px;
 
@@ -355,29 +346,31 @@ margin-bottom:15px;
 
 .event p{
 
-font-size:18px;
+color:white;
 
 line-height:1.7;
 
 }
 
-/* ===========================
+/* =======================================
    RSVP
-=========================== */
+======================================= */
 
 .rsvp{
 
-padding:90px 20px;
+padding:80px 20px;
 
-background:#fff;
+background:#241548;
 
 }
 
 .rsvp h2{
 
-font-size:42px;
+font-family:'Great Vibes',cursive;
 
-color:#b8860b;
+font-size:44px;
+
+color:#ffd7ef;
 
 margin-bottom:20px;
 
@@ -387,29 +380,33 @@ margin-bottom:20px;
 
 font-size:20px;
 
+color:white;
+
 margin-bottom:25px;
 
 }
 
-/* ===========================
+/* =======================================
    GALLERY
-=========================== */
+======================================= */
 
 .gallery{
 
-padding:90px 20px;
+padding:80px 20px;
 
-background:#fdf8ef;
+background:#1b1035;
 
 }
 
 .gallery h2{
 
-font-size:42px;
+font-family:'Great Vibes',cursive;
 
-color:#b8860b;
+font-size:44px;
 
-margin-bottom:40px;
+color:#ffd7ef;
+
+margin-bottom:35px;
 
 }
 
@@ -419,7 +416,7 @@ display:grid;
 
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 
-gap:20px;
+gap:18px;
 
 max-width:1200px;
 
@@ -431,17 +428,15 @@ margin:auto;
 
 width:100%;
 
-height:250px;
+height:260px;
 
 object-fit:cover;
 
-border-radius:18px;
+border-radius:15px;
 
-border:3px solid #d4af37;
+border:2px solid #b76e79;
 
 transition:.4s;
-
-cursor:pointer;
 
 }
 
@@ -449,27 +444,26 @@ cursor:pointer;
 
 transform:scale(1.05);
 
-box-shadow:0 15px 35px rgba(0,0,0,.25);
-
 }
-
-/* ===========================
+/* =======================================
    LOCATION
-=========================== */
+======================================= */
 
 .location{
 
-padding:90px 20px;
+padding:80px 20px;
 
-background:white;
+background:#241548;
 
 }
 
 .location h2{
 
-font-size:42px;
+font-family:'Great Vibes',cursive;
 
-color:#b8860b;
+font-size:44px;
+
+color:#ffd7ef;
 
 margin-bottom:20px;
 
@@ -481,32 +475,39 @@ font-size:20px;
 
 line-height:1.8;
 
+color:white;
+
 margin-bottom:30px;
 
 }
 
-iframe{
+.location iframe{
+
+width:100%;
+
+max-width:900px;
+
+height:380px;
+
+border:none;
 
 border-radius:20px;
 
-box-shadow:0 10px 35px rgba(0,0,0,.2);
+box-shadow:0 15px 35px rgba(0,0,0,.35);
 
 }
-/* ===========================
+
+/* =======================================
    FOOTER
-=========================== */
+======================================= */
 
 .footer{
 
-background:#b8860b;
+background:#12091f;
+
+padding:35px 20px;
 
 color:white;
-
-padding:30px 20px;
-
-text-align:center;
-
-font-size:18px;
 
 }
 
@@ -514,15 +515,25 @@ font-size:18px;
 
 font-family:'Great Vibes',cursive;
 
-font-size:40px;
+font-size:46px;
 
-margin-bottom:10px;
+color:#ffd7ef;
+
+margin-bottom:15px;
 
 }
 
-/* ===========================
+.footer p{
+
+font-size:18px;
+
+line-height:1.8;
+
+}
+
+/* =======================================
    FLOATING HEARTS
-=========================== */
+======================================= */
 
 .hearts{
 
@@ -548,48 +559,54 @@ z-index:999;
 
 position:absolute;
 
-bottom:-80px;
+bottom:-50px;
 
 font-size:28px;
 
-color:#d4af37;
+color:#ff8cc8;
 
 animation:floatHeart linear infinite;
 
-opacity:.8;
-
 }
 
-.hearts span:nth-child(1){left:5%;animation-duration:9s;}
-.hearts span:nth-child(2){left:18%;animation-duration:12s;}
-.hearts span:nth-child(3){left:30%;animation-duration:10s;}
-.hearts span:nth-child(4){left:45%;animation-duration:14s;}
-.hearts span:nth-child(5){left:60%;animation-duration:11s;}
+.hearts span:nth-child(1){left:5%;animation-duration:8s;}
+.hearts span:nth-child(2){left:18%;animation-duration:11s;}
+.hearts span:nth-child(3){left:30%;animation-duration:9s;}
+.hearts span:nth-child(4){left:45%;animation-duration:12s;}
+.hearts span:nth-child(5){left:60%;animation-duration:10s;}
 .hearts span:nth-child(6){left:75%;animation-duration:13s;}
-.hearts span:nth-child(7){left:88%;animation-duration:10s;}
-.hearts span:nth-child(8){left:96%;animation-duration:12s;}
+.hearts span:nth-child(7){left:88%;animation-duration:9s;}
+.hearts span:nth-child(8){left:96%;animation-duration:11s;}
 
 @keyframes floatHeart{
 
 0%{
-transform:translateY(0) scale(.7);
+
+transform:translateY(0) scale(.8);
+
 opacity:0;
+
 }
 
 20%{
+
 opacity:1;
+
 }
 
 100%{
+
 transform:translateY(-120vh) scale(1.5);
+
 opacity:0;
-}
 
 }
 
-/* ===========================
-   FADE EFFECT
-=========================== */
+}
+
+/* =======================================
+   FADE ANIMATION
+======================================= */
 
 section{
 
@@ -617,39 +634,15 @@ transform:translateY(0);
 
 }
 
-/* ===========================
-   SCROLL BAR
-=========================== */
-
-::-webkit-scrollbar{
-
-width:10px;
-
-}
-
-::-webkit-scrollbar-thumb{
-
-background:#b8860b;
-
-border-radius:20px;
-
-}
-
-::-webkit-scrollbar-track{
-
-background:#f5f5f5;
-
-}
-
-/* ===========================
+/* =======================================
    MOBILE
-=========================== */
+======================================= */
 
 @media(max-width:768px){
 
 .hero h1{
 
-font-size:55px;
+font-size:56px;
 
 }
 
@@ -667,7 +660,7 @@ font-size:17px;
 
 .main-photo{
 
-width:250px;
+width:230px;
 
 }
 
@@ -708,46 +701,8 @@ width:90%;
 
 .footer h3{
 
-font-size:30px;
+font-size:34px;
 
 }
 
-}
-/* Falling Petals */
-
-.petals{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-pointer-events:none;
-overflow:hidden;
-z-index:1000;
-}
-
-.petals span{
-position:absolute;
-top:-50px;
-font-size:28px;
-animation:fall linear infinite;
-opacity:.9;
-}
-
-.petals span:nth-child(1){left:5%;animation-duration:9s;}
-.petals span:nth-child(2){left:18%;animation-duration:12s;}
-.petals span:nth-child(3){left:30%;animation-duration:10s;}
-.petals span:nth-child(4){left:45%;animation-duration:14s;}
-.petals span:nth-child(5){left:60%;animation-duration:11s;}
-.petals span:nth-child(6){left:75%;animation-duration:13s;}
-.petals span:nth-child(7){left:88%;animation-duration:10s;}
-.petals span:nth-child(8){left:96%;animation-duration:12s;}
-
-@keyframes fall{
-0%{
-transform:translateY(-50px) rotate(0deg);
-}
-100%{
-transform:translateY(110vh) rotate(360deg);
-}
 }
