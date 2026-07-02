@@ -25,14 +25,16 @@ overflow-x:hidden;
 /* HERO */
 
 .hero{
+button,
+.btn{
+    background:#b76e79;
+    color:white;
+}
 
-min-height:100vh;
-
-background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
-url("couple.jpg.jpeg");
-
-background-size:cover;
-background-position:center;
+button:hover,
+.btn:hover{
+    background:#9c5b65;
+};
 
 display:flex;
 
