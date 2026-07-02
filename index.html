@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Princi Weds Abhishek</title>
+<title>Princi Weds Abhishek 💎</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
@@ -12,125 +12,316 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:'Playfair Display', serif;
 }
 
-/* 🌸 LIGHT BACKGROUND */
 body{
-  background: linear-gradient(135deg,#fffafc,#fff3e6);
+  font-family:'Playfair Display', serif;
+  background: linear-gradient(135deg,#fffafc,#fff3e6,#ffffff);
   overflow-x:hidden;
+  color:#333;
 }
 
-/* 💫 SPLASH SCREEN */
-#splash{
+/* 🌟 INTRO SCREEN */
+#intro{
   height:100vh;
-  width:100%;
   display:flex;
   align-items:center;
   justify-content:center;
   flex-direction:column;
-  background: linear-gradient(135deg,#fff,#fff7ed);
   text-align:center;
+  background: radial-gradient(circle,#fff,#fff1dc);
 }
 
-.ganesh{
-  width:120px;
-  margin-bottom:20px;
-  animation: float 3s ease-in-out infinite;
+.glass{
+  padding:35px;
+  border-radius:25px;
+  background:rgba(255,255,255,0.6);
+  backdrop-filter:blur(12px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.15);
 }
 
-.title{
-  font-size:32px;
-  color:#b48a2c;
+h1{
   font-family:'Great Vibes', cursive;
-}
-
-.date{
-  margin:10px 0 25px;
-  font-size:18px;
-  color:#555;
-}
-
-.enter-btn{
-  padding:12px 25px;
-  border:none;
-  background:linear-gradient(45deg,#d4af37,#f5e6a8);
-  color:#000;
-  font-weight:bold;
-  border-radius:30px;
-  cursor:pointer;
-  box-shadow:0 5px 15px rgba(0,0,0,0.2);
-  transition:0.3s;
-}
-
-.enter-btn:hover{
-  transform:scale(1.05);
-}
-
-/* 💍 MAIN HERO */
-.hero{
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:20px;
-}
-
-.hero h1{
-  font-size:40px;
+  font-size:42px;
   color:#b48a2c;
-  font-family:'Great Vibes', cursive;
 }
 
-.hero h2{
-  font-size:20px;
-  color:#444;
-}
-
-.hero p{
+p{
   margin-top:10px;
   color:#666;
 }
 
-/* ✨ FLOAT ANIMATION */
-@keyframes float{
-  0%{transform:translateY(0px);}
-  50%{transform:translateY(-10px);}
-  100%{transform:translateY(0px);}
+.btn{
+  margin-top:20px;
+  padding:12px 30px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(45deg,#d4af37,#f7e7a1);
+  cursor:pointer;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.05);
+}
+
+/* 💎 SECTIONS */
+section{
+  padding:80px 20px;
+  text-align:center;
+}
+
+.title{
+  font-family:'Great Vibes', cursive;
+  font-size:48px;
+  color:#b48a2c;
+}
+
+.card{
+  margin:20px auto;
+  max-width:700px;
+  background:rgba(255,255,255,0.7);
+  backdrop-filter:blur(10px);
+  padding:25px;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* ⏳ COUNTDOWN */
+.timer{
+  font-size:28px;
+  color:#b48a2c;
+  font-weight:bold;
+}
+
+/* 📸 GALLERY */
+.gallery{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.gallery img{
+  width:120px;
+  height:120px;
+  border-radius:15px;
+  object-fit:cover;
+  transition:0.3s;
+}
+
+.gallery img:hover{
+  transform:scale(1.1);
+}
+
+/* 💌 FORM */
+input,textarea{
+  width:90%;
+  padding:10px;
+  margin:8px 0;
+  border-radius:10px;
+  border:1px solid #ccc;
+}
+
+button{
+  padding:10px 20px;
+  border:none;
+  background:#b48a2c;
+  color:#fff;
+  border-radius:20px;
+  cursor:pointer;
+}
+
+/* 🌸 PETALS */
+.petal{
+  position:fixed;
+  top:-10px;
+  font-size:18px;
+  animation: fall linear infinite;
+}
+
+@keyframes fall{
+  to{transform:translateY(110vh) rotate(360deg);}
+}
+
+/* ✨ SPARKLES */
+.sparkle{
+  position:fixed;
+  color:#ffd700;
+  animation: twinkle 2s infinite;
+}
+
+@keyframes twinkle{
+  0%,100%{opacity:0;}
+  50%{opacity:1;}
+}
+
+/* 🎇 FIREWORK */
+.firework{
+  position:fixed;
+  width:6px;
+  height:6px;
+  background:#ffd700;
+  border-radius:50%;
+  animation: explode 1s ease-out forwards;
+}
+
+@keyframes explode{
+  0%{transform:scale(1);}
+  100%{transform:scale(25);opacity:0;}
+}
+
+/* 📱 MOBILE */
+@media(max-width:600px){
+  .title{font-size:36px;}
+  .gallery img{width:90px;height:90px;}
 }
 </style>
 </head>
 
 <body>
 
-<!-- 🌸 SPLASH -->
-<div id="splash">
-  <img class="ganesh" src="https://i.imgur.com/8Km9tLL.png" />
-  <div class="title">Princi Weds Abhishek</div>
-  <div class="date">2 February 2027</div>
+<audio id="music" loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a6c7f2.mp3">
+</audio>
 
-  <button class="enter-btn" onclick="enterSite()">
-    Enter Invitation 💌
-  </button>
+<!-- 🌟 INTRO -->
+<div id="intro">
+  <div class="glass">
+    <h1>Princi Weds Abhishek</h1>
+    <p>2 February 2027 💍</p>
+    <button class="btn" onclick="startExperience()">Enter Diamond Invitation 💎</button>
+  </div>
 </div>
 
-<!-- 💍 MAIN -->
+<!-- 💎 MAIN -->
 <div id="main" style="display:none;">
-  <section class="hero">
-    <div>
-      <h2>You Are Invited</h2>
-      <h1>Princi & Abhishek</h1>
-      <p>A Beautiful Beginning of Forever 💖</p>
+
+<section>
+  <div class="title">A Royal Beginning</div>
+</section>
+
+<!-- ⏳ COUNTDOWN -->
+<section>
+  <div class="card">
+    <h2>Countdown</h2>
+    <div class="timer" id="timer"></div>
+  </div>
+</section>
+
+<!-- 📸 GALLERY -->
+<section>
+  <div class="card">
+    <h2>Memories</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1523438097201-512ae7d59c3c">
+      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
+      <img src="https://images.unsplash.com/photo-1523437275715-3a3d0d0a3c1c">
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- 📍 MAP -->
+<section>
+  <div class="card">
+    <h2>Venue</h2>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.056!2d72.5714!3d23.0225"
+      width="100%" height="250" style="border:0;border-radius:15px;">
+    </iframe>
+  </div>
+</section>
+
+<!-- 💌 RSVP -->
+<section>
+  <div class="card">
+    <h2>RSVP</h2>
+    <form onsubmit="sendWhatsApp(event)">
+      <input id="name" placeholder="Your Name" required />
+      <input id="guests" placeholder="Guests" required />
+      <textarea id="msg" placeholder="Message"></textarea>
+      <button type="submit">Send via WhatsApp 💌</button>
+    </form>
+  </div>
+</section>
+
 </div>
 
 <script>
-function enterSite(){
-  document.getElementById("splash").style.display="none";
+
+function startExperience(){
+  document.getElementById("intro").style.display="none";
   document.getElementById("main").style.display="block";
+
+  document.getElementById("music").play();
+
+  startCountdown();
+  startEffects();
+  fireworkBurst();
 }
+
+/* ⏳ COUNTDOWN */
+function startCountdown(){
+  const target = new Date("Feb 2, 2027").getTime();
+
+  setInterval(()=>{
+    const now = new Date().getTime();
+    const diff = target - now;
+    const days = Math.floor(diff/(1000*60*60*24));
+    document.getElementById("timer").innerHTML = days + " Days Left 💎";
+  },1000);
+}
+
+/* 💌 WHATSAPP RSVP */
+function sendWhatsApp(e){
+  e.preventDefault();
+  let name=document.getElementById("name").value;
+  let guests=document.getElementById("guests").value;
+  let msg=document.getElementById("msg").value;
+
+  let url="https://wa.me/911234567890?text="
+  + "Name: "+name+"%0AGuests: "+guests+"%0AMessage: "+msg;
+
+  window.open(url,"_blank");
+}
+
+/* 🌸 PETALS + SPARKLES */
+function startEffects(){
+
+  setInterval(()=>{
+    let p=document.createElement("div");
+    p.className="petal";
+    p.innerHTML="🌸";
+    p.style.left=Math.random()*100+"vw";
+    p.style.animationDuration=(3+Math.random()*5)+"s";
+    document.body.appendChild(p);
+    setTimeout(()=>p.remove(),8000);
+  },200);
+
+  setInterval(()=>{
+    let s=document.createElement("div");
+    s.className="sparkle";
+    s.innerHTML="✨";
+    s.style.left=Math.random()*100+"vw";
+    s.style.top=Math.random()*100+"vh";
+    document.body.appendChild(s);
+    setTimeout(()=>s.remove(),2000);
+  },300);
+}
+
+/* 🎇 FIREWORK */
+function fireworkBurst(){
+  for(let i=0;i<20;i++){
+    let f=document.createElement("div");
+    f.className="firework";
+    f.style.left=Math.random()*100+"vw";
+    f.style.top=Math.random()*100+"vh";
+    document.body.appendChild(f);
+    setTimeout(()=>f.remove(),1000);
+  }
+}
+
 </script>
 
 </body>
