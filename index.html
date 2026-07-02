@@ -1,399 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Princi Weds Abhishek</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
-<title>💍 Princi Weds Abhishek</title>
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Playfair Display', serif;
+}
 
-<link rel="stylesheet" href="css/css/style.css">
+/* 🌸 LIGHT BACKGROUND */
+body{
+  background: linear-gradient(135deg,#fffafc,#fff3e6);
+  overflow-x:hidden;
+}
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+/* 💫 SPLASH SCREEN */
+#splash{
+  height:100vh;
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  background: linear-gradient(135deg,#fff,#fff7ed);
+  text-align:center;
+}
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+.ganesh{
+  width:120px;
+  margin-bottom:20px;
+  animation: float 3s ease-in-out infinite;
+}
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+.title{
+  font-size:32px;
+  color:#b48a2c;
+  font-family:'Great Vibes', cursive;
+}
 
+.date{
+  margin:10px 0 25px;
+  font-size:18px;
+  color:#555;
+}
+
+.enter-btn{
+  padding:12px 25px;
+  border:none;
+  background:linear-gradient(45deg,#d4af37,#f5e6a8);
+  color:#000;
+  font-weight:bold;
+  border-radius:30px;
+  cursor:pointer;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+  transition:0.3s;
+}
+
+.enter-btn:hover{
+  transform:scale(1.05);
+}
+
+/* 💍 MAIN HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+}
+
+.hero h1{
+  font-size:40px;
+  color:#b48a2c;
+  font-family:'Great Vibes', cursive;
+}
+
+.hero h2{
+  font-size:20px;
+  color:#444;
+}
+
+.hero p{
+  margin-top:10px;
+  color:#666;
+}
+
+/* ✨ FLOAT ANIMATION */
+@keyframes float{
+  0%{transform:translateY(0px);}
+  50%{transform:translateY(-10px);}
+  100%{transform:translateY(0px);}
+}
+</style>
 </head>
 
 <body>
 
-<<div class="petals">
-  <span>🌸</span>
-  <span>🌸</span>
-  <span>🌸</span>
-  <span>🌸</span>
-  <span>🌸</span>
-  <span>🌸</span>
-  <span>🌸</span>
-  <span>🌸</span>
+<!-- 🌸 SPLASH -->
+<div id="splash">
+  <img class="ganesh" src="https://i.imgur.com/8Km9tLL.png" />
+  <div class="title">Princi Weds Abhishek</div>
+  <div class="date">2 February 2027</div>
+
+  <button class="enter-btn" onclick="enterSite()">
+    Enter Invitation 💌
+  </button>
 </div>
 
-
-
-<!-- HERO SECTION -->
-
-<section class="hero">
-
-<div class="overlay">
-
-<h3>॥ श्री गणेशाय नमः ॥</h3>
-
-<h1>Princi Weds Abhishek</h1>
-
-<h2>💍 Wedding Invitation 💍</h2>
-
-<p>
-
-With the blessings of our beloved parents,<br>
-
-we cordially invite you to celebrate<br>
-
-our wedding ceremony.
-
-</p>
-
-<div class="hero-date">
-
-<h3>📅 2 February 2027</h3>
-
-<h3>🕖 Barat : 7:00 PM</h3>
-
-<h3>💍 Wedding : 11:00 PM</h3>
-
+<!-- 💍 MAIN -->
+<div id="main" style="display:none;">
+  <section class="hero">
+    <div>
+      <h2>You Are Invited</h2>
+      <h1>Princi & Abhishek</h1>
+      <p>A Beautiful Beginning of Forever 💖</p>
+    </div>
+  </section>
 </div>
-
-<img src="couple.jpg.jpeg"
-
-class="main-photo"
-
-alt="Princi & Abhishek">
-
-<br><br>
-
-<button onclick="playMusic()">
-
-🎵 Play Music
-
-</button>
-
-<div id="countdown"></div>
-
-</div>
-
-</section>
-
-<!-- Couple -->
-
-<section class="couple">
-
-<h2>❤️ Meet The Couple ❤️</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<img src="bride.jpg.jpeg">
-
-<h3>Princi Jaiswal</h3>
-
-<p>
-
-Daughter of
-
-<br>
-
-Rajendra Jaiswal
-
-<br>
-
-&
-
-<br>
-
-Manju Jaiswal
-
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="groom.jpg.jpeg">
-
-<h3>Abhishek Jayswal</h3>
-
-<p>
-
-Son of
-
-<br>
-
-Kamlesh Jayswal
-
-<br>
-
-&
-
-<br>
-
-Malti Jayswal
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- Wedding Timeline -->
-
-<section class="timeline">
-
-<h2>💒 Wedding Timeline 💒</h2>
-
-<div class="timeline-box">
-
-<div class="event">
-
-<h3>🌼 Haldi Ceremony</h3>
-
-<p>📅 2 February 2027</p>
-
-<p>🕘 9:00 AM</p>
-
-</div>
-
-<div class="event">
-
-<h3>🐎 Barat</h3>
-
-<p>📅 2 February 2027</p>
-
-<p>🕖 7:00 PM</p>
-
-</div>
-
-<div class="event">
-
-<h3>💍 Wedding Ceremony</h3>
-
-<p>📅 2 February 2027</p>
-
-<p>🕚 11:00 PM</p>
-
-</div>
-
-</div>
-
-</section>
-<!-- RSVP -->
-
-<section class="rsvp">
-
-<h2>💌 RSVP</h2>
-
-<p>
-
-We would be delighted to have your presence on our special day.
-
-</p>
-
-<a class="btn"
-
-href="https://wa.me/919624512678?text=Hello%20Princi%20and%20Abhishek!%0A%0AMy%20Name:%20__________%0ANumber%20of%20Guests:%20____%0A%0AI%20will%20be%20joining%20your%20wedding.%20❤️"
-
-target="_blank">
-
-💬 Confirm on WhatsApp
-
-</a>
-
-</section>
-
-<!-- Parents -->
-
-<section class="parents">
-
-<h2>🙏 With the Blessings of Our Parents</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>Bride's Parents</h3>
-
-<p>
-
-Rajendra Jaiswal
-
-<br>
-
-❤️
-
-<br>
-
-Manju Jaiswal
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Groom's Parents</h3>
-
-<p>
-
-Kamlesh Jayswal
-
-<br>
-
-❤️
-
-<br>
-
-Malti Jayswal
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- Gallery -->
-
-<section class="gallery">
-
-<h2>📸 Our Beautiful Memories</h2>
-
-<div class="gallery-grid">
-
-<img src="gallery1.jpg.jpeg" alt="Gallery 1">
-
-<img src="gallery2.jpg.jpeg" alt="Gallery 2">
-
-<img src="gallery3.jpg.jpeg" alt="Gallery 3">
-
-<img src="gallery4.jpg.jpeg" alt="Gallery 4">
-
-<img src="gallery5.jpg.jpeg" alt="Gallery 5">
-
-</div>
-
-</section>
-
-<!-- Venue -->
-
-<section class="location">
-
-<h2>📍 Wedding Venue</h2>
-
-<p>
-
-Kadva Patidar Samaj
-
-<br>
-
-Opp. Collector Office
-
-<br>
-
-Sector 12B
-
-<br>
-
-Gandhinagar
-
-</p>
-
-<iframe
-
-src="https://www.google.com/maps?q=Kadva+Patidar+Samaj+Gandhinagar&output=embed"
-
-width="100%"
-
-height="380"
-
-style="border:0;border-radius:20px;"
-
-loading="lazy">
-
-</iframe>
-
-<br><br>
-
-<a class="btn"
-
-href="https://maps.google.com/?q=Kadva+Patidar+Samaj+Gandhinagar"
-
-target="_blank">
-
-📍 Open Google Maps
-
-</a>
-
-</section>
-<!-- Music -->
-
-<audio id="music" loop>
-    <source src="song.mp3" type="audio/mpeg">
-</audio>
-
-<!-- Footer -->
-
-<footer class="footer">
-
-    <h3>💍 Princi Weds Abhishek 💍</h3>
-
-    <p>
-        Thank you for being a part of our love story.
-    </p>
-
-    <p>
-        Your presence will make our wedding even more special.
-    </p>
-
-    <p>
-        📅 2 February 2027
-    </p>
-
-    <p>
-        📍 Kadva Patidar Samaj,
-        Opp. Collector Office,
-        Sector 12B,
-        Gandhinagar
-    </p>
-
-    <br>
-
-    <h4>
-        ❤️ Looking Forward To Celebrating With You ❤️
-    </h4>
-
-</footer>
-
-<!-- Music Script -->
 
 <script>
-
-function playMusic(){
-
-document.getElementById("music").play();
-
+function enterSite(){
+  document.getElementById("splash").style.display="none";
+  document.getElementById("main").style.display="block";
 }
-
 </script>
 
-<!-- Countdown Script -->
-
-<script src="css/css/script.js"></script>
-
 </body>
-
 </html>
