@@ -110,3 +110,49 @@ button:hover, .btn:hover {
 body {
     overflow-x: hidden;
 }
+/* Floating Hearts */
+
+.hearts{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    overflow:hidden;
+}
+
+.hearts span{
+    position:absolute;
+    bottom:-50px;
+    color:#ff4d6d;
+    font-size:30px;
+    animation:floatHeart 10s linear infinite;
+}
+
+.hearts span:nth-child(1){left:5%;animation-duration:8s;}
+.hearts span:nth-child(2){left:18%;animation-duration:11s;}
+.hearts span:nth-child(3){left:30%;animation-duration:9s;}
+.hearts span:nth-child(4){left:45%;animation-duration:12s;}
+.hearts span:nth-child(5){left:60%;animation-duration:10s;}
+.hearts span:nth-child(6){left:75%;animation-duration:13s;}
+.hearts span:nth-child(7){left:88%;animation-duration:9s;}
+.hearts span:nth-child(8){left:96%;animation-duration:11s;}
+
+@keyframes floatHeart{
+
+0%{
+transform:translateY(0) scale(0.8);
+opacity:0;
+}
+
+20%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-120vh) scale(1.5);
+opacity:0;
+}
+
+}
