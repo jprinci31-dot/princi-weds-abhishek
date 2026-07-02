@@ -1,49 +1,34 @@
-function playMusic() {
-    document.getElementById("music").play();
+// Wedding Countdown
+
+const weddingDate = new Date("February 2, 2027 23:00:00").getTime();
+
+const timer = setInterval(function () {
+
+const now = new Date().getTime();
+
+const distance = weddingDate - now;
+
+const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+document.getElementById("countdown").innerHTML =
+`
+<h2>⏳ Countdown</h2>
+<h3>${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds</h3>
+`;
+
+if (distance < 0) {
+clearInterval(timer);
+document.getElementById("countdown").innerHTML =
+"<h2>❤️ Wedding Day Has Arrived ❤️</h2>";
 }
 
-/* AUTO PLAY (browser-safe trick) */
-window.addEventListener("click", function () {
-    document.getElementById("music").play();
-}, { once: true });
+},1000);
 
-/* COUNTDOWN */
-const weddingDate = new Date("February 2, 2027 19:00:00").getTime();
+// Music
 
-const countdown = document.getElementById("countdown");
-
-setInterval(function () {
-    const now = new Date().getTime();
-    const distance = weddingDate - now;
-
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    countdown.innerHTML =
-        "⏳ " + days + "d " + hours + "h " + minutes + "m " + seconds + "s";
-
-    if (distance < 0) {
-        countdown.innerHTML = "💍 The Wedding Has Started!";
-    }
-}, 1000);
-
-/* HEART ANIMATION */
-setInterval(() => {
-    const heart = document.createElement("div");
-    heart.innerHTML = "💖";
-    heart.style.position = "fixed";
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.top = "100vh";
-    heart.style.fontSize = Math.random() * 20 + 10 + "px";
-    heart.style.animation = "floatUp 5s linear";
-    heart.style.opacity = 0.7;
-    heart.style.pointerEvents = "none";
-
-    document.body.appendChild(heart);
-
-    setTimeout(() => {
-        heart.remove();
-    }, 5000);
-}, 500);
+function playMusic(){
+document.getElementById("music").play();
+}
