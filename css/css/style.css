@@ -200,3 +200,34 @@ button:hover{
 
 transform:scale(1.08);
 }
+/* Premium Hero */
+
+.hero h1{
+    font-size:60px;
+    color:#fff;
+    text-shadow:3px 3px 10px rgba(0,0,0,0.5);
+    margin-bottom:10px;
+}
+
+.hero h2{
+    color:#fff8dc;
+    font-size:30px;
+}
+
+.hero p{
+    font-size:20px;
+    line-height:1.8;
+}
+
+.main-photo{
+    width:320px;
+    max-width:90%;
+    border-radius:20px;
+    border:5px solid #fff;
+    box-shadow:0 15px 35px rgba(0,0,0,.3);
+    transition:.4s;
+}
+
+.main-photo:hover{
+    transform:scale(1.05);
+}
