@@ -1,89 +1,168 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Princi Weds Abhishek</title>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-<link rel="stylesheet" href="style.css">
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0b0b0f;
+  color: white;
+  text-align: center;
+}
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1529634897217-5e6d1d1d2b0d") center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-<body>
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
 
-<!-- HERO SECTION -->
-<header class="hero">
-  <div class="overlay"></div>
-  <div class="hero-content">
-    <h1>Princi Weds Abhishek</h1>
-    <p>Save the Date • 2 February 2027</p>
-    <a href="#invite" class="btn">Enter Invitation</a>
-  </div>
-</header>
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 90%;
+}
 
-<!-- INVITATION CARD -->
-<section id="invite" class="card-section">
-  <div class="glass-card">
-    <h2>Wedding Invitation</h2>
-    <p>
-      With the blessings of our families,<br>
-      we invite you to celebrate the wedding of<br><br>
-      <b>Princi Jaiswal</b> ❤️ <b>Abhishek Jaiswal</b>
-    </p>
+.hero h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 60px;
+  color: gold;
+}
 
-    <p class="date">📅 2 February 2027</p>
+.hero p {
+  margin: 10px 0 20px;
+}
 
-    <div class="buttons">
-      <a class="whatsapp bride" href="https://wa.me/919624512678" target="_blank">
-        RSVP Bride Family
-      </a>
+.btn {
+  padding: 12px 25px;
+  background: gold;
+  color: black;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+}
 
-      <a class="whatsapp groom" href="https://wa.me/917016999835" target="_blank">
-        RSVP Groom Family
-      </a>
-    </div>
-  </div>
-</section>
+/* CARD */
+.card-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
 
-<<!-- EVENTS -->
-<section class="events">
-  <h2>Wedding Events</h2>
+.glass-card {
+  background: rgba(255,255,255,0.08);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,215,0,0.3);
+  max-width: 500px;
+  width: 100%;
+}
 
-  <div class="event-grid">
-    <div class="event">
-      <h3>Haldi</h3>
-      <p>Morning Ceremony</p>
-    </div>
+.date {
+  margin: 15px 0;
+  color: gold;
+  font-weight: bold;
+}
 
-    <div class="event">
-      <h3>Baraat</h3>
-      <p>Grand Celebration</p>
-    </div>
+/* BUTTONS */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
 
-    <div class="event">
-      <h3>Wedding Ceremony</h3>
-      <p>Main Ritual</p>
-    </div>
-  </div>
-</section>
+.whatsapp {
+  padding: 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
 
-<!-- GALLERY -->
-<section class="gallery">
-  <h2>Memories</h2>
+.bride {
+  background: #25D366;
+}
 
-  <div class="gallery-grid">
-    <img src="https://source.unsplash.com/400x400/?wedding" />
-    <img src="https://source.unsplash.com/400x401/?couple" />
-    <img src="https://source.unsplash.com/400x402/?indian-wedding" />
-    <img src="https://source.unsplash.com/400x403/?rings" />
-  </div>
-</section>
+.groom {
+  background: #128C7E;
+}
 
-<!-- FOOTER -->
-<footer>
-  <p>Made with ❤️ for Princi & Abhishek</p>
-</footer>
+/* EVENTS */
+.events {
+  padding: 60px 20px;
+}
 
-</body>
-</html>
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 30px auto 0;
+}
+
+.event {
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid rgba(255,215,0,0.2);
+  transition: 0.3s;
+}
+
+.event:hover {
+  transform: translateY(-5px);
+}
+
+/* GALLERY FIX (IMPORTANT) */
+.gallery {
+  padding: 60px 20px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  max-width: 900px;
+  margin: 30px auto 0;
+}
+
+.gallery-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;   /* PERFECT SQUARE */
+  object-fit: cover;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+  padding: 20px;
+  background: #111;
+  margin-top: 30px;
+}
+
+/* MOBILE FIX */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .glass-card {
+    padding: 25px;
+  }
+}
