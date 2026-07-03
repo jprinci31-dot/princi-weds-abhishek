@@ -1,328 +1,491 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Princi Weds Abhishek 💎</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<title>Princi ❤️ Abhishek | Wedding Invitation</title>
 
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-body{
-  font-family:'Playfair Display', serif;
-  background: linear-gradient(135deg,#fffafc,#fff3e6,#ffffff);
-  overflow-x:hidden;
-  color:#333;
-}
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
 
-/* 🌟 INTRO SCREEN */
-#intro{
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction:column;
-  text-align:center;
-  background: radial-gradient(circle,#fff,#fff1dc);
-}
+<link rel="stylesheet" href="style.css">
 
-.glass{
-  padding:35px;
-  border-radius:25px;
-  background:rgba(255,255,255,0.6);
-  backdrop-filter:blur(12px);
-  box-shadow:0 20px 40px rgba(0,0,0,0.15);
-}
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-h1{
-  font-family:'Great Vibes', cursive;
-  font-size:42px;
-  color:#b48a2c;
-}
-
-p{
-  margin-top:10px;
-  color:#666;
-}
-
-.btn{
-  margin-top:20px;
-  padding:12px 30px;
-  border:none;
-  border-radius:30px;
-  background:linear-gradient(45deg,#d4af37,#f7e7a1);
-  cursor:pointer;
-  font-weight:bold;
-  transition:0.3s;
-}
-
-.btn:hover{
-  transform:scale(1.05);
-}
-
-/* 💎 SECTIONS */
-section{
-  padding:80px 20px;
-  text-align:center;
-}
-
-.title{
-  font-family:'Great Vibes', cursive;
-  font-size:48px;
-  color:#b48a2c;
-}
-
-.card{
-  margin:20px auto;
-  max-width:700px;
-  background:rgba(255,255,255,0.7);
-  backdrop-filter:blur(10px);
-  padding:25px;
-  border-radius:20px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.1);
-}
-
-/* ⏳ COUNTDOWN */
-.timer{
-  font-size:28px;
-  color:#b48a2c;
-  font-weight:bold;
-}
-
-/* 📸 GALLERY */
-.gallery{
-  display:flex;
-  gap:10px;
-  justify-content:center;
-  flex-wrap:wrap;
-}
-
-.gallery img{
-  width:120px;
-  height:120px;
-  border-radius:15px;
-  object-fit:cover;
-  transition:0.3s;
-}
-
-.gallery img:hover{
-  transform:scale(1.1);
-}
-
-/* 💌 FORM */
-input,textarea{
-  width:90%;
-  padding:10px;
-  margin:8px 0;
-  border-radius:10px;
-  border:1px solid #ccc;
-}
-
-button{
-  padding:10px 20px;
-  border:none;
-  background:#b48a2c;
-  color:#fff;
-  border-radius:20px;
-  cursor:pointer;
-}
-
-/* 🌸 PETALS */
-.petal{
-  position:fixed;
-  top:-10px;
-  font-size:18px;
-  animation: fall linear infinite;
-}
-
-@keyframes fall{
-  to{transform:translateY(110vh) rotate(360deg);}
-}
-
-/* ✨ SPARKLES */
-.sparkle{
-  position:fixed;
-  color:#ffd700;
-  animation: twinkle 2s infinite;
-}
-
-@keyframes twinkle{
-  0%,100%{opacity:0;}
-  50%{opacity:1;}
-}
-
-/* 🎇 FIREWORK */
-.firework{
-  position:fixed;
-  width:6px;
-  height:6px;
-  background:#ffd700;
-  border-radius:50%;
-  animation: explode 1s ease-out forwards;
-}
-
-@keyframes explode{
-  0%{transform:scale(1);}
-  100%{transform:scale(25);opacity:0;}
-}
-
-/* 📱 MOBILE */
-@media(max-width:600px){
-  .title{font-size:36px;}
-  .gallery img{width:90px;height:90px;}
-}
-</style>
 </head>
 
 <body>
 
-<audio id="music" loop>
-  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c8c8a6c7f2.mp3">
+<!-- ================= SPLASH SCREEN ================= -->
+
+<div id="splash">
+
+<div class="ganesh">
+
+🕉️
+
+</div>
+
+<h1>Princi <span>❤</span> Abhishek</h1>
+
+<p>Wedding Invitation</p>
+
+<h2>02 February 2027</h2>
+
+<button id="enterBtn">
+
+Enter Invitation
+
+</button>
+
+</div>
+
+<!-- Floating Petals -->
+
+<div id="petals"></div>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="logo">
+
+Princi ❤️ Abhishek
+
+</div>
+
+<nav>
+
+<a href="#home">Home</a>
+
+<a href="#couple">Bride & Groom</a>
+
+<a href="#story">Story</a>
+
+<a href="#gallery">Gallery</a>
+
+<a href="#events">Events</a>
+
+<a href="#countdown">Countdown</a>
+
+<a href="#venue">Venue</a>
+
+<a href="#rsvp">RSVP</a>
+
+</nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+<div class="overlay"></div>
+
+<div class="hero-content">
+
+<h3>Together With Their Families</h3>
+
+<h1>
+
+Princi Jaiswal
+
+<br>
+
+<span>&</span>
+
+<br>
+
+Abhishek Jayswal
+
+</h1>
+
+<p>
+
+Request the honour of your presence
+
+to celebrate their Wedding
+
+</p>
+
+<h2>
+
+02 February 2027
+
+</h2>
+
+<a href="#couple" class="btn">
+
+Explore Invitation
+
+</a>
+
+</div>
+
+</section>
+<!-- ================= BRIDE & GROOM ================= -->
+
+<section class="couple-section" id="couple">
+
+<div class="section-title">
+
+<h4>Meet The Couple</h4>
+
+<h2>Bride & Groom</h2>
+
+<p>Two hearts, one soul, one beautiful beginning.</p>
+
+</div>
+
+<div class="couple-container">
+
+<!-- Bride -->
+
+<div class="person-card">
+
+<div class="person-image">
+
+<img src="images/bride.jpg" alt="Bride">
+
+</div>
+
+<h2>Princi Jaiswal</h2>
+
+<h4>The Bride 👰</h4>
+
+<p>
+
+A beautiful soul filled with love, kindness and dreams.
+
+Ready to begin a wonderful journey with her soulmate.
+
+</p>
+
+</div>
+
+<!-- Couple Image -->
+
+<div class="center-photo">
+
+<div class="ring-circle">
+
+<img src="images/gallery1.jpg" alt="Couple">
+
+</div>
+
+</div>
+
+<!-- Groom -->
+
+<div class="person-card">
+
+<div class="person-image">
+
+<img src="images/groom.jpg" alt="Groom">
+
+</div>
+
+<h2>Abhishek Jayswal</h2>
+
+<h4>The Groom 🤵</h4>
+
+<p>
+
+A caring heart, loving partner and perfect companion,
+
+ready to start forever together.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= LOVE STORY ================= -->
+
+<section class="love-story" id="story">
+
+<div class="section-title">
+
+<h4>Our Journey</h4>
+
+<h2>Love Story</h2>
+
+</div>
+
+<div class="story-box">
+
+<div class="story-item">
+
+<h3>💖 First Meeting</h3>
+
+<p>
+
+Every beautiful story starts with a simple hello.
+
+Fate brought our paths together.
+
+</p>
+
+</div>
+
+<div class="story-item">
+
+<h3>💕 Friendship</h3>
+
+<p>
+
+Laughter, care and endless conversations slowly turned
+
+into love.
+
+</p>
+
+</div>
+
+<div class="story-item">
+
+<h3>💍 Engagement</h3>
+
+<p>
+
+With blessings from our families,
+
+we promised forever.
+
+</p>
+
+</div>
+
+<div class="story-item">
+
+<h3>❤️ Wedding Day</h3>
+
+<p>
+
+On <strong>2 February 2027</strong>
+
+we begin our forever journey together.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= GALLERY ================= -->
+
+<section class="gallery" id="gallery">
+
+<div class="section-title">
+
+<h4>Captured Memories</h4>
+
+<h2>Wedding Gallery</h2>
+
+</div>
+
+<div class="gallery-grid">
+
+<img src="images/gallery1.jpg" alt="Gallery">
+
+<img src="images/gallery2.jpg" alt="Gallery">
+
+<img src="images/gallery3.jpg" alt="Gallery">
+
+<img src="images/gallery4.jpg" alt="Gallery">
+
+<img src="images/gallery5.jpg" alt="Gallery">
+
+<img src="images/gallery1.jpg" alt="Gallery">
+
+</div>
+
+</section>
+<!-- ================= EVENTS ================= -->
+
+<section class="events" id="events">
+
+    <div class="section-title">
+        <h4>Wedding Celebrations</h4>
+        <h2>Our Events</h2>
+    </div>
+
+    <div class="event-container">
+
+        <div class="event-card">
+            <i class="fa-solid fa-seedling"></i>
+            <h3>Haldi Ceremony</h3>
+            <h4>31 January 2027</h4>
+            <p>
+                A joyful Haldi ceremony filled with love,
+                laughter and family blessings.
+            </p>
+        </div>
+
+        <div class="event-card">
+            <i class="fa-solid fa-horse"></i>
+            <h3>Baraat</h3>
+            <h4>2 February 2027</h4>
+            <p>
+                Welcome the groom with music,
+                dance and grand celebrations.
+            </p>
+        </div>
+
+        <div class="event-card">
+            <i class="fa-solid fa-ring"></i>
+            <h3>Wedding Ceremony</h3>
+            <h4>2 February 2027</h4>
+            <p>
+                Join us as we begin
+                our forever journey together.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= COUNTDOWN ================= -->
+
+<section class="countdown" id="countdown">
+
+    <div class="section-title">
+        <h4>We're Getting Married</h4>
+        <h2>Countdown</h2>
+    </div>
+
+    <div id="timer">
+
+        <div class="time-box">
+            <span id="days">00</span>
+            <small>Days</small>
+        </div>
+
+        <div class="time-box">
+            <span id="hours">00</span>
+            <small>Hours</small>
+        </div>
+
+        <div class="time-box">
+            <span id="minutes">00</span>
+            <small>Minutes</small>
+        </div>
+
+        <div class="time-box">
+            <span id="seconds">00</span>
+            <small>Seconds</small>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= VENUE ================= -->
+
+<section class="venue" id="venue">
+
+    <div class="section-title">
+        <h4>Venue</h4>
+        <h2>Wedding Location</h2>
+    </div>
+
+    <div class="map-box">
+
+        <!-- यहाँ अपनी Google Map Embed Link डालना -->
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb="
+            loading="lazy"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+</section>
+
+<!-- ================= RSVP ================= -->
+
+<section class="rsvp" id="rsvp">
+
+    <div class="section-title">
+        <h4>Kindly Respond</h4>
+        <h2>RSVP</h2>
+    </div>
+
+    <form>
+
+        <input type="text"
+               placeholder="Your Name"
+               required>
+
+        <input type="number"
+               placeholder="Guests"
+               required>
+
+        <textarea
+            placeholder="Best Wishes"></textarea>
+
+        <button type="submit">
+            Send RSVP
+        </button>
+
+    </form>
+
+</section>
+
+<!-- ================= MUSIC ================= -->
+
+<audio id="bgMusic" loop>
+    <source src="music/wedding.mp3" type="audio/mpeg">
 </audio>
 
-<!-- 🌟 INTRO -->
-<div id="intro">
-  <div class="glass">
-    <h1>Princi Weds Abhishek</h1>
-    <p>2 February 2027 💍</p>
-    <button class="btn" onclick="startExperience()">Enter Diamond Invitation 💎</button>
-  </div>
-</div>
+<button id="musicBtn">
+    <i class="fa-solid fa-music"></i>
+</button>
 
-<!-- 💎 MAIN -->
-<div id="main" style="display:none;">
+<!-- ================= FOOTER ================= -->
 
-<section>
-  <div class="title">A Royal Beginning</div>
-</section>
+<footer>
 
-<!-- ⏳ COUNTDOWN -->
-<section>
-  <div class="card">
-    <h2>Countdown</h2>
-    <div class="timer" id="timer"></div>
-  </div>
-</section>
+<h2>Princi ❤️ Abhishek</h2>
 
-<!-- 📸 GALLERY -->
-<section>
-  <div class="card">
-    <h2>Memories</h2>
-    <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1523438097201-512ae7d59c3c">
-      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
-      <img src="https://images.unsplash.com/photo-1523437275715-3a3d0d0a3c1c">
-    </div>
-  </div>
-</section>
+<p>
 
-<!-- 📍 MAP -->
-<section>
-  <div class="card">
-    <h2>Venue</h2>
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.056!2d72.5714!3d23.0225"
-      width="100%" height="250" style="border:0;border-radius:15px;">
-    </iframe>
-  </div>
-</section>
+Together with our families,
 
-<!-- 💌 RSVP -->
-<section>
-  <div class="card">
-    <h2>RSVP</h2>
-    <form onsubmit="sendWhatsApp(event)">
-      <input id="name" placeholder="Your Name" required />
-      <input id="guests" placeholder="Guests" required />
-      <textarea id="msg" placeholder="Message"></textarea>
-      <button type="submit">Send via WhatsApp 💌</button>
-    </form>
-  </div>
-</section>
+we warmly invite you
 
-</div>
+to celebrate our Wedding.
 
-<script>
+</p>
 
-function startExperience(){
-  document.getElementById("intro").style.display="none";
-  document.getElementById("main").style.display="block";
+<h3>
 
-  document.getElementById("music").play();
+02 February 2027
 
-  startCountdown();
-  startEffects();
-  fireworkBurst();
-}
+</h3>
 
-/* ⏳ COUNTDOWN */
-function startCountdown(){
-  const target = new Date("Feb 2, 2027").getTime();
+<p>
 
-  setInterval(()=>{
-    const now = new Date().getTime();
-    const diff = target - now;
-    const days = Math.floor(diff/(1000*60*60*24));
-    document.getElementById("timer").innerHTML = days + " Days Left 💎";
-  },1000);
-}
+Made with ❤️ for our loved ones
 
-/* 💌 WHATSAPP RSVP */
-function sendWhatsApp(e){
-  e.preventDefault();
-  let name=document.getElementById("name").value;
-  let guests=document.getElementById("guests").value;
-  let msg=document.getElementById("msg").value;
+</p>
 
-  let url="https://wa.me/911234567890?text="
-  + "Name: "+name+"%0AGuests: "+guests+"%0AMessage: "+msg;
+</footer>
 
-  window.open(url,"_blank");
-}
-
-/* 🌸 PETALS + SPARKLES */
-function startEffects(){
-
-  setInterval(()=>{
-    let p=document.createElement("div");
-    p.className="petal";
-    p.innerHTML="🌸";
-    p.style.left=Math.random()*100+"vw";
-    p.style.animationDuration=(3+Math.random()*5)+"s";
-    document.body.appendChild(p);
-    setTimeout(()=>p.remove(),8000);
-  },200);
-
-  setInterval(()=>{
-    let s=document.createElement("div");
-    s.className="sparkle";
-    s.innerHTML="✨";
-    s.style.left=Math.random()*100+"vw";
-    s.style.top=Math.random()*100+"vh";
-    document.body.appendChild(s);
-    setTimeout(()=>s.remove(),2000);
-  },300);
-}
-
-/* 🎇 FIREWORK */
-function fireworkBurst(){
-  for(let i=0;i<20;i++){
-    let f=document.createElement("div");
-    f.className="firework";
-    f.style.left=Math.random()*100+"vw";
-    f.style.top=Math.random()*100+"vh";
-    document.body.appendChild(f);
-    setTimeout(()=>f.remove(),1000);
-  }
-}
-
-</script>
+<script src="script.js"></script>
 
 </body>
+
 </html>
