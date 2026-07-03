@@ -1,168 +1,92 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-body {
-  font-family: 'Poppins', sans-serif;
-  background: #0b0b0f;
-  color: white;
-  text-align: center;
-}
+<title>Princi ❤️ Abhishek Wedding</title>
 
-/* HERO */
-.hero {
-  height: 100vh;
-  background: url("https://images.unsplash.com/photo-1529634897217-5e6d1d1d2b0d") center/cover no-repeat;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+<link rel="stylesheet" href="style.css">
 
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-}
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 90%;
-}
+<body>
 
-.hero h1 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 60px;
-  color: gold;
-}
+<!-- BACKGROUND LAYER -->
+<div class="bg-overlay"></div>
 
-.hero p {
-  margin: 10px 0 20px;
-}
+<!-- HERO -->
+<header class="hero">
+  <h1>Princi ❤️ Abhishek</h1>
+  <p class="sub">We are getting married</p>
+  <p class="date">2 February 2027</p>
+  <a href="#invite" class="btn">Open Invitation</a>
+</header>
 
-.btn {
-  padding: 12px 25px;
-  background: gold;
-  color: black;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-}
+<!-- INVITATION -->
+<section id="invite" class="card">
+  <h2>Wedding Invitation</h2>
 
-/* CARD */
-.card-section {
-  padding: 60px 20px;
-  display: flex;
-  justify-content: center;
-}
+  <p>
+    With the blessings of our families,<br>
+    we invite you to join our wedding celebration.
+  </p>
 
-.glass-card {
-  background: rgba(255,255,255,0.08);
-  padding: 40px;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,215,0,0.3);
-  max-width: 500px;
-  width: 100%;
-}
+  <h3 class="names">Princi Jaiswal ❤️ Abhishek Jaiswal</h3>
 
-.date {
-  margin: 15px 0;
-  color: gold;
-  font-weight: bold;
-}
+  <div class="rsvp">
+    <a href="https://wa.me/919624512678" target="_blank">RSVP Bride Side</a>
+    <a href="https://wa.me/917016999835" target="_blank">RSVP Groom Side</a>
+  </div>
+</section>
 
-/* BUTTONS */
-.buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 20px;
-}
+<!-- EVENTS -->
+<section class="events">
+  <h2>Wedding Events</h2>
 
-.whatsapp {
-  padding: 12px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  color: white;
-}
+  <div class="grid">
+    <div class="box">
+      <h3>Haldi</h3>
+      <p>1 Feb • 10:00 AM</p>
+    </div>
 
-.bride {
-  background: #25D366;
-}
+    <div class="box">
+      <h3>Baraat</h3>
+      <p>1 Feb • 5:00 PM</p>
+    </div>
 
-.groom {
-  background: #128C7E;
-}
+    <div class="box">
+      <h3>Wedding</h3>
+      <p>2 Feb • 7:00 PM</p>
+    </div>
+  </div>
+</section>
 
-/* EVENTS */
-.events {
-  padding: 60px 20px;
-}
+<!-- LOCATION -->
+<section class="location">
+  <h2>Venue</h2>
+  <p>Ahmedabad, Gujarat</p>
+  <a href="https://maps.google.com" target="_blank">View Map</a>
+</section>
 
-.event-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  max-width: 900px;
-  margin: 30px auto 0;
-}
+<!-- GALLERY -->
+<section class="gallery">
+  <h2>Memories</h2>
 
-.event {
-  background: rgba(255,255,255,0.05);
-  padding: 25px;
-  border-radius: 15px;
-  border: 1px solid rgba(255,215,0,0.2);
-  transition: 0.3s;
-}
+  <div class="gallery-grid">
+    <img src="https://images.unsplash.com/photo-1529634897217-5e6d1d1d2b0d">
+    <img src="https://images.unsplash.com/photo-1523438097201-512ae7d59c1a">
+    <img src="https://images.unsplash.com/photo-1519741497674-611481863552">
+    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc">
+    <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf">
+    <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b">
+  </div>
+</section>
 
-.event:hover {
-  transform: translateY(-5px);
-}
+<footer>
+  <p>Made with ❤️ for Wedding Celebration</p>
+</footer>
 
-/* GALLERY FIX (IMPORTANT) */
-.gallery {
-  padding: 60px 20px;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 12px;
-  max-width: 900px;
-  margin: 30px auto 0;
-}
-
-.gallery-grid img {
-  width: 100%;
-  aspect-ratio: 1 / 1;   /* PERFECT SQUARE */
-  object-fit: cover;
-  border-radius: 12px;
-  transition: 0.3s;
-}
-
-.gallery-grid img:hover {
-  transform: scale(1.05);
-}
-
-/* FOOTER */
-footer {
-  padding: 20px;
-  background: #111;
-  margin-top: 30px;
-}
-
-/* MOBILE FIX */
-@media (max-width: 600px) {
-  .hero h1 {
-    font-size: 40px;
-  }
-
-  .glass-card {
-    padding: 25px;
-  }
-}
+</body>
+</html>
