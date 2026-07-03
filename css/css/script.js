@@ -1,8 +1,9 @@
-/* ===============================
-   DIAMOND BABY PINK SCRIPT
+/* ==============================
+   DIAMOND BABY PINK JS FINAL
+   PRINCI ❤️ ABHISHEK
 ================================= */
 
-// Splash screen
+// Splash Screen
 const splash = document.getElementById("splash");
 const enterBtn = document.getElementById("enterBtn");
 const music = document.getElementById("bgMusic");
@@ -13,12 +14,15 @@ enterBtn?.addEventListener("click", () => {
 });
 
 
-// Countdown
+// ================= COUNTDOWN =================
+
 const weddingDate = new Date("February 2, 2027 23:00:00").getTime();
 
 setInterval(() => {
     const now = new Date().getTime();
     const diff = weddingDate - now;
+
+    if (diff < 0) return;
 
     document.getElementById("days").innerText =
         Math.floor(diff / (1000 * 60 * 60 * 24));
@@ -34,7 +38,8 @@ setInterval(() => {
 }, 1000);
 
 
-// Music button
+// ================= MUSIC BUTTON =================
+
 const musicBtn = document.getElementById("musicBtn");
 
 musicBtn?.addEventListener("click", () => {
@@ -50,15 +55,18 @@ musicBtn?.addEventListener("click", () => {
 });
 
 
-// Scroll to top
+// ================= SCROLL TO TOP =================
+
 const topBtn = document.getElementById("topBtn");
 
 window.addEventListener("scroll", () => {
-    if (window.scrollY > 400) {
+
+    if (window.scrollY > 300) {
         topBtn.style.display = "block";
     } else {
         topBtn.style.display = "none";
     }
+
 });
 
 topBtn?.addEventListener("click", () => {
@@ -66,7 +74,8 @@ topBtn?.addEventListener("click", () => {
 });
 
 
-// Floating petals (simple)
+// ================= FLOATING PETALS =================
+
 setInterval(() => {
 
     const petal = document.createElement("div");
@@ -74,8 +83,9 @@ setInterval(() => {
     petal.style.position = "fixed";
     petal.style.left = Math.random() * 100 + "vw";
     petal.style.top = "-20px";
-    petal.style.fontSize = "20px";
+    petal.style.fontSize = "18px";
     petal.style.zIndex = "1";
+    petal.style.pointerEvents = "none";
 
     document.body.appendChild(petal);
 
@@ -88,4 +98,4 @@ setInterval(() => {
         }
     }, 20);
 
-}, 500);
+}, 600);
