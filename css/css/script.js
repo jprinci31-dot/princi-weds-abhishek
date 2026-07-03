@@ -1,159 +1,393 @@
-
-/* 💎 DIAMOND WEDDING EXPERIENCE ENGINE */
+/* =====================================
+   DIAMOND WEDDING SCRIPT - PART 1
+===================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("💎 Diamond Wedding Website Loaded");
-});
 
-/* 🚀 START EXPERIENCE */
-function startExperience() {
-  document.getElementById("intro").style.display = "none";
-  document.getElementById("main").style.display = "block";
+    /* Splash Screen */
 
-  startMusic();
-  startCountdown();
-  startPetals();
-  startSparkles();
-  fireworkBurst();
-  revealOnScroll();
-}
+    const splash = document.getElementById("splash");
+    const enterBtn = document.getElementById("enterBtn");
 
-/* 🎵 MUSIC CONTROL (safe autoplay) */
-function startMusic() {
-  const music = document.getElementById("music");
-  if (!music) return;
+    if (enterBtn) {
 
-  music.volume = 0.6;
+        enterBtn.addEventListener("click", () => {
 
-  const playPromise = music.play();
+            splash.style.opacity = "0";
 
-  if (playPromise !== undefined) {
-    playPromise.catch(() => {
-      console.log("🔇 User gesture required for autoplay");
-    });
-  }
-}
+            setTimeout(() => {
 
-/* ⏳ COUNTDOWN */
-function startCountdown() {
-  const targetDate = new Date("Feb 2, 2027 00:00:00").getTime();
+                splash.style.display = "none";
 
-  setInterval(() => {
-    const now = new Date().getTime();
-    const diff = targetDate - now;
+            }, 1000);
 
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+            startMusic();
+            startPetals();
+            startSparkles();
+            startCountdown();
 
-    const el = document.getElementById("timer");
+        });
 
-    if (el) {
-      el.innerHTML = `
-        ${days} Days : ${hours} Hours : ${minutes} Min 💎
-      `;
     }
-  }, 1000);
-}
 
-/* 🌸 FALLING PETALS */
-function startPetals() {
-  setInterval(() => {
-    const petal = document.createElement("div");
-    petal.className = "petal";
-    petal.innerHTML = "🌸";
-
-    petal.style.left = Math.random() * 100 + "vw";
-    petal.style.animationDuration = (3 + Math.random() * 5) + "s";
-    petal.style.fontSize = (14 + Math.random() * 10) + "px";
-
-    document.body.appendChild(petal);
-
-    setTimeout(() => petal.remove(), 9000);
-  }, 200);
-}
-
-/* ✨ SPARKLE EFFECT */
-function startSparkles() {
-  setInterval(() => {
-    const sparkle = document.createElement("div");
-    sparkle.className = "sparkle";
-    sparkle.innerHTML = "✨";
-
-    sparkle.style.left = Math.random() * 100 + "vw";
-    sparkle.style.top = Math.random() * 100 + "vh";
-    sparkle.style.fontSize = (10 + Math.random() * 12) + "px";
-
-    document.body.appendChild(sparkle);
-
-    setTimeout(() => sparkle.remove(), 2000);
-  }, 250);
-}
-
-/* 🎇 FIREWORK BURST */
-function fireworkBurst() {
-  for (let i = 0; i < 25; i++) {
-    const firework = document.createElement("div");
-    firework.className = "firework";
-
-    firework.style.left = Math.random() * 100 + "vw";
-    firework.style.top = Math.random() * 100 + "vh";
-    firework.style.background = randomGold();
-
-    document.body.appendChild(firework);
-
-    setTimeout(() => firework.remove(), 1000);
-  }
-}
-
-/* 🎨 GOLD COLOR VARIATION */
-function randomGold() {
-  const shades = ["#ffd700", "#f7e7a1", "#d4af37", "#fff3c4"];
-  return shades[Math.floor(Math.random() * shades.length)];
-}
-
-/* 💌 RSVP (WhatsApp style optional hook) */
-function sendRSVP(name, guests, message) {
-  const phone = "911234567890"; // change this
-
-  const text = `Name: ${name}%0AGuests: ${guests}%0AMessage: ${message}`;
-
-  const url = `https://wa.me/${phone}?text=${text}`;
-  window.open(url, "_blank");
-}
-
-/* 🌊 SCROLL REVEAL ANIMATION */
-function revealOnScroll() {
-  const elements = document.querySelectorAll(".card, section");
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = "1";
-        entry.target.style.transform = "translateY(0)";
-      }
-    });
-  }, {
-    threshold: 0.1
-  });
-
-  elements.forEach(el => {
-    el.style.opacity = "0";
-    el.style.transform = "translateY(40px)";
-    el.style.transition = "0.8s ease";
-    observer.observe(el);
-  });
-}
-
-/* 🖱️ CLICK FIREWORK (extra luxury touch) */
-document.addEventListener("click", (e) => {
-  const spark = document.createElement("div");
-
-  spark.className = "firework";
-  spark.style.left = e.clientX + "px";
-  spark.style.top = e.clientY + "px";
-
-  document.body.appendChild(spark);
-
-  setTimeout(() => spark.remove(), 800);
 });
+
+/* ===========================
+BACKGROUND MUSIC
+=========================== */
+
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
+
+let playing = false;
+
+function startMusic(){
+
+if(music){
+
+music.volume = 0.4;
+
+music.play();
+
+playing = true;
+
+}
+
+}
+
+if(musicBtn){
+
+musicBtn.addEventListener("click",()=>{
+
+if(!playing){
+
+music.play();
+
+playing=true;
+
+musicBtn.innerHTML='<i class="fa-solid fa-volume-high"></i>';
+
+}
+
+else{
+
+music.pause();
+
+playing=false;
+
+musicBtn.innerHTML='<i class="fa-solid fa-volume-xmark"></i>';
+
+}
+
+});
+
+}
+
+/* ===========================
+COUNTDOWN
+=========================== */
+
+const targetDate = new Date("February 2, 2027 00:00:00").getTime();
+
+function startCountdown(){
+
+setInterval(()=>{
+
+const now = new Date().getTime();
+
+const distance = targetDate-now;
+
+const days=Math.floor(distance/(1000*60*60*24));
+
+const hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+const minutes=Math.floor((distance%(1000*60*60))/(1000*60));
+
+const seconds=Math.floor((distance%(1000*60))/1000);
+
+document.getElementById("days").innerHTML=days;
+
+document.getElementById("hours").innerHTML=hours;
+
+document.getElementById("minutes").innerHTML=minutes;
+
+document.getElementById("seconds").innerHTML=seconds;
+
+},1000);
+
+}
+
+/* ===========================
+FALLING PETALS
+=========================== */
+
+function startPetals(){
+
+setInterval(()=>{
+
+const petal=document.createElement("div");
+
+petal.classList.add("petal");
+
+petal.innerHTML="🌸";
+
+petal.style.left=Math.random()*100+"vw";
+
+petal.style.animationDuration=(5+Math.random()*5)+"s";
+
+petal.style.fontSize=(18+Math.random()*18)+"px";
+
+document.body.appendChild(petal);
+
+setTimeout(()=>{
+
+petal.remove();
+
+},9000);
+
+},350);
+
+}
+
+/* ===========================
+SPARKLES
+=========================== */
+
+function startSparkles(){
+
+setInterval(()=>{
+
+const spark=document.createElement("div");
+
+spark.classList.add("sparkle");
+
+spark.innerHTML="✨";
+
+spark.style.left=Math.random()*100+"vw";
+
+spark.style.top=Math.random()*100+"vh";
+
+document.body.appendChild(spark);
+
+setTimeout(()=>{
+
+spark.remove();
+
+},2000);
+
+},500);
+
+}
+/* =====================================
+   DIAMOND WEDDING SCRIPT - PART 2
+===================================== */
+
+/* ===========================
+SMOOTH SCROLL
+=========================== */
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function(e){
+
+        e.preventDefault();
+
+        const target=document.querySelector(this.getAttribute("href"));
+
+        if(target){
+
+            target.scrollIntoView({
+
+                behavior:"smooth"
+
+            });
+
+        }
+
+    });
+
+});
+
+/* ===========================
+SCROLL REVEAL
+=========================== */
+
+const revealItems=document.querySelectorAll(
+".person-card,.story-item,.event-card,.gallery-grid img,.time-box,.map-box,.rsvp form"
+);
+
+function reveal(){
+
+const windowHeight=window.innerHeight;
+
+revealItems.forEach(item=>{
+
+const top=item.getBoundingClientRect().top;
+
+if(top<windowHeight-100){
+
+item.style.opacity="1";
+
+item.style.transform="translateY(0)";
+
+}
+
+});
+
+}
+
+revealItems.forEach(item=>{
+
+item.style.opacity="0";
+
+item.style.transform="translateY(60px)";
+
+item.style.transition="all .8s ease";
+
+});
+
+window.addEventListener("scroll",reveal);
+
+reveal();
+
+/* ===========================
+GALLERY POPUP
+=========================== */
+
+const images=document.querySelectorAll(".gallery-grid img");
+
+images.forEach(img=>{
+
+img.addEventListener("click",()=>{
+
+const popup=document.createElement("div");
+
+popup.style.position="fixed";
+
+popup.style.left="0";
+
+popup.style.top="0";
+
+popup.style.width="100%";
+
+popup.style.height="100%";
+
+popup.style.background="rgba(0,0,0,.9)";
+
+popup.style.display="flex";
+
+popup.style.justifyContent="center";
+
+popup.style.alignItems="center";
+
+popup.style.zIndex="999999";
+
+const image=document.createElement("img");
+
+image.src=img.src;
+
+image.style.maxWidth="90%";
+
+image.style.maxHeight="90%";
+
+image.style.borderRadius="20px";
+
+image.style.border="5px solid gold";
+
+popup.appendChild(image);
+
+popup.onclick=function(){
+
+popup.remove();
+
+};
+
+document.body.appendChild(popup);
+
+});
+
+});
+
+/* ===========================
+RSVP
+=========================== */
+
+const form=document.querySelector(".rsvp form");
+
+if(form){
+
+form.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("💖 Thank You! Your RSVP has been received.");
+
+form.reset();
+
+});
+
+}
+
+/* ===========================
+CLICK SPARKLE
+=========================== */
+
+document.addEventListener("click",function(e){
+
+const sparkle=document.createElement("div");
+
+sparkle.innerHTML="✨";
+
+sparkle.style.position="fixed";
+
+sparkle.style.left=e.clientX+"px";
+
+sparkle.style.top=e.clientY+"px";
+
+sparkle.style.fontSize="24px";
+
+sparkle.style.pointerEvents="none";
+
+sparkle.style.animation="sparkle 1s linear forwards";
+
+document.body.appendChild(sparkle);
+
+setTimeout(()=>{
+
+sparkle.remove();
+
+},1000);
+
+});
+
+/* ===========================
+HEADER EFFECT
+=========================== */
+
+window.addEventListener("scroll",()=>{
+
+const header=document.querySelector("header");
+
+if(window.scrollY>80){
+
+header.style.background="rgba(45,20,70,.92)";
+
+header.style.boxShadow="0 10px 30px rgba(0,0,0,.35)";
+
+}else{
+
+header.style.background="rgba(40,20,70,.45)";
+
+header.style.boxShadow="none";
+
+}
+
+});
+
+/* ===========================
+CONSOLE MESSAGE
+=========================== */
+
+console.log("💜 Princi ❤️ Abhishek");
+console.log("💍 Wedding Date : 02 February 2027");
+console.log("✨ Diamond Version Loaded Successfully");
