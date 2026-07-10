@@ -1,14 +1,22 @@
 // ===============================
-// WEDDING COUNTDOWN
+// COUNTDOWN
 // ===============================
 
 const weddingDate = new Date("February 2, 2027 23:00:00").getTime();
 
-const countdown = setInterval(function () {
+function updateCountdown() {
 
     const now = new Date().getTime();
 
     const distance = weddingDate - now;
+
+    if (distance < 0) {
+
+        document.getElementById("countdown").innerHTML =
+            "<h2>🎉 Happily Married 🎉</h2>";
+
+        return;
+    }
 
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
 
@@ -27,91 +35,69 @@ const countdown = setInterval(function () {
         1000
     );
 
-    document.getElementById("days").innerHTML = days;
+    document.getElementById("days").textContent = days;
 
-    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("hours").textContent = hours;
 
-    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("minutes").textContent = minutes;
 
-    document.getElementById("seconds").innerHTML = seconds;
+    document.getElementById("seconds").textContent = seconds;
 
-    if (distance < 0) {
+}
 
-        clearInterval(countdown);
+updateCountdown();
 
-        document.getElementById("countdown").innerHTML =
-        "<h2>🎉 We Are Married! 🎉</h2>";
-
-    }
-
-}, 1000);
+setInterval(updateCountdown,1000);
 
 
 // ===============================
-// NAVBAR SHADOW
+// HEADER SHADOW
 // ===============================
 
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll",()=>{
 
-    const header = document.querySelector("header");
+const header=document.querySelector("header");
 
-    if (window.scrollY > 50) {
+if(window.scrollY>50){
 
-        header.style.boxShadow =
-        "0 8px 20px rgba(0,0,0,.12)";
+header.style.boxShadow="0 10px 30px rgba(0,0,0,.15)";
 
-    } else {
+}else{
 
-        header.style.boxShadow =
-        "0 2px 10px rgba(0,0,0,.08)";
+header.style.boxShadow="0 5px 15px rgba(0,0,0,.08)";
 
-    }
+}
 
 });
 
 
 // ===============================
-// GALLERY ZOOM
+// GALLERY POPUP
 // ===============================
 
-document.querySelectorAll(".gallery img").forEach(image => {
+const galleryImages=document.querySelectorAll(".gallery-item img");
 
-    image.addEventListener("click", () => {
+galleryImages.forEach(img=>{
 
-        const popup = document.createElement("div");
+img.addEventListener("click",()=>{
 
-        popup.style.position = "fixed";
-        popup.style.left = "0";
-        popup.style.top = "0";
-        popup.style.width = "100%";
-        popup.style.height = "100%";
-        popup.style.background = "rgba(0,0,0,.9)";
-        popup.style.display = "flex";
-        popup.style.justifyContent = "center";
-        popup.style.alignItems = "center";
-        popup.style.cursor = "pointer";
-        popup.style.zIndex = "99999";
+const popup=document.createElement("div");
 
-        const img = document.createElement("img");
+popup.className="popup";
 
-        img.src = image.src;
+popup.innerHTML=`
+<img src="${img.src}">
+`;
 
-        img.style.maxWidth = "90%";
-        img.style.maxHeight = "90%";
-        img.style.borderRadius = "15px";
-        img.style.boxShadow = "0 0 25px rgba(255,255,255,.4)";
+document.body.appendChild(popup);
 
-        popup.appendChild(img);
+popup.addEventListener("click",()=>{
 
-        document.body.appendChild(popup);
+popup.remove();
 
-        popup.onclick = () => {
+});
 
-            popup.remove();
-
-        };
-
-    });
+});
 
 });
 
@@ -120,31 +106,22 @@ document.querySelectorAll(".gallery img").forEach(image => {
 // FADE ANIMATION
 // ===============================
 
-const observer = new IntersectionObserver((entries)=>{
+const observer=new IntersectionObserver(entries=>{
 
 entries.forEach(entry=>{
 
 if(entry.isIntersecting){
 
-entry.target.style.opacity="1";
-
-entry.target.style.transform="translateY(0)";
+entry.target.classList.add("show");
 
 }
 
 });
 
-},{threshold:0.15});
+},{threshold:.15});
 
+document.querySelectorAll("section").forEach(section=>{
 
-document.querySelectorAll(".section").forEach(sec=>{
-
-sec.style.opacity="0";
-
-sec.style.transform="translateY(40px)";
-
-sec.style.transition=".8s";
-
-observer.observe(sec);
+observer.observe(section);
 
 });
